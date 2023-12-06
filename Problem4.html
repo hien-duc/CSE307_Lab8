@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery UI Dialog - Default functionality</title>
+
+    <link rel="stylesheet" href="/jquery-ui-1.13.2/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/jquery-ui-1.13.2/jquery-ui.css" />
+
+    <script src="jquery-ui-1.13.2/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#dialog-confirm").dialog({
+          resizable: false,
+          height: "auto",
+          width: 400,
+          modal: true,
+          buttons: {
+            "Delete all items": function () {
+              $(this).dialog("close");
+            },
+            Cancel: function () {
+              $(this).dialog("close");
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="dialog-confirm" title="Modal tiltle">
+      <p>
+        <span
+          class="ui-icon ui-icon-alert"
+          style="float: left; margin: 12px 12px 20px 0"
+        ></span
+        >These items will be permanently deleted and cannot be recovered. Are
+        you sure?
+      </p>
+    </div>
+
+    <p>
+      Example <a href="http://example.com">example.com</a>.
+      
+    </p>
+  </body>
+</html>
